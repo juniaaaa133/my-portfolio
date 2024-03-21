@@ -1,0 +1,130 @@
+.ct-ctn {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.ct-form {
+    width: 60%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.ct-info-ctn {
+    width: 40%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+.ct-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px;
+    width:100%;
+    height: 80px;
+    border-radius: 5px;
+    background-color: #f1fafa;
+}
+.ct-info:hover {
+    background-color: #CEEBF5;
+}
+.ct-infoD {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px;
+    width:100%;
+    height: 80px;
+    border-radius: 5px;
+    background-color: #3e4647;
+
+}
+.ct-infoD:hover {
+    background-color: #7996B1;
+}
+.ct-info-title-ctn  {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.ct-info-logo {
+    border : 1.3px solid #f5b010;
+}
+.ct-inp-ctn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.ct-inp {
+    width: 49%;
+    height: 45px;
+    padding: 10px 12px;
+    border-radius: 28px;
+    background-color: inherit;
+    border : solid 1.5px #707070;
+    outline:  inherit;
+}
+.ct-area {
+    width: 100%;
+    height: 200px;
+    padding: 10px 12px;
+    border-radius: 28px;
+    background-color: inherit;
+    border : solid 1.5px #707070;
+    outline:  inherit;
+}
+.ct-icn-ctn {
+    display: flex;
+    gap:10px;
+    align-items: center;
+    width: 100%;
+}
+.ct-btn-ctn {
+    width: 100%;
+}
+.ct-btn  {
+    width: 150px;
+}
+
+@media (max-width : 990px) {
+    .ct-form {
+        width: 100%;
+        align-items: center;
+    }
+    
+.ct-inp-ctn {
+    width: 65%;
+}
+.ct-area {
+    width: 65%;
+    height: 260px;
+}
+    .ct-info-ctn {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .ct-inp-ctn {
+        width: 100%;
+    }
+    .ct-area {
+        width: 100%;
+        height: 260px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ct-inp-ctn {
+    gap:15px;
+    }
+    .ct-inp {
+        width: 100%;
+    }
+    .ct-btn  {
+        width: 100%;
+    }
+}

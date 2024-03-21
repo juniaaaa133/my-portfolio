@@ -1,0 +1,145 @@
+.nav-main {
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-around;
+    align-items: center;
+    
+    z-index : 8;
+}
+.nav-logo {
+}
+.nav-info-ctn {
+    width:500px;
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+    gap:10px;
+}
+.nav-a {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* sticky navigation*/
+.nav-mainS {
+    backdrop-filter: blur(10px);
+    background: rgba(227, 227, 227, 0.055);
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    left:0;
+    width: 100%;
+    height: fit-content;
+    z-index : 8;
+}
+
+.nicn_rpsive2 {
+display: none;
+}
+.nicn-mb {
+    z-index: 6;
+}
+.nicnmbop1 {
+transform: rotate(45deg) translateY(4px) translateX(4px);
+}
+.nicnmbop2 {
+    opacity: 0;
+}
+.nicnmbop3 {
+    transform: rotate(-45deg) translateY(-4px) translateX(4px);
+    }
+.nmenumbop {
+    position: fixed;
+    top:60px;
+    right:0;
+    width:100%;height: 100vh;
+    background-color: white;
+    z-index : 7;
+
+}
+.nmenumb {
+    position: fixed;
+    top:60px;
+    right:0;
+    width:0;height: 0;
+     background-color: inherit;
+    opacity: 0;
+    z-index : 7;
+}
+.nmenumbopD {
+    position: fixed;
+    top:60px;
+    right:0;
+    width:100%;height: 100vh;
+    z-index : 7;
+    background-color: #282d2f;
+
+}
+.nmenumbD {
+    position: fixed;
+    top:60px;
+    right:0;
+    width:0;height: 0;
+     background-color: inherit;
+     z-index : 7;
+    opacity: 0;
+}
+.nmenudivop {
+    visibility:visible;
+    margin: auto;
+    position: absolute;
+    top:0;right:0;left:0;bottom:0;
+    width:fit-content;
+    height: fit-content;
+    gap: 20px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+}
+.nmenudiv{
+    visibility:hidden;
+    margin: auto;
+    position: absolute;
+    top:0;right:0;left:0;bottom:0;
+    width:fit-content;
+    height: fit-content;
+    gap: 35px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+}
+.nav-bar {
+    width:40%;
+    height: 1.6px;
+}
+.navmb {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap:1px;
+}
+.navmb:hover .nav-bar {
+    width: 70%;
+}
+@media (max-width: 768px) {
+    .nav-main {
+        justify-content: space-between;
+        padding: 20px;
+      
+    }
+    .nav-mainS {
+        justify-content: space-between;
+        padding: 20px;
+      
+    }
+    .nicn_rpsive {
+    display: none;
+}
+.nicn_rpsive2 {
+    display: inherit;
+    }
+}

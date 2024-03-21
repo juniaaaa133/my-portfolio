@@ -1,0 +1,131 @@
+.info-main {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    align-items: flex-start;
+}
+.info-title-ctn {
+    background-color: yellow;
+    display: flex;
+    width:fit-content;
+    flex-direction: column;
+    gap: 2px;
+}
+.info-title {
+
+}
+.info-bar {
+    height:1.5px;
+    width: 38px;
+
+}
+.info-tech-ctn {
+    width: 78%;
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    justify-content: center;
+    align-items: center;
+    gap:2px;
+    margin: 0 auto;
+}
+.info {
+    width: 100%;
+    height: 110px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:10px;
+    align-items: center;
+    background-color: #e3ecf7;
+
+    /* border-right : solid 2px #7996b14b;
+    border-left : solid 2px #7996b14b; */
+}
+.infoD {
+    width: 100%;
+    height: 110px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:10px;
+    align-items: center;
+    background-color: #4c4f55;
+  
+    /* border-right : solid 2px #7996b14b;
+    border-left : solid 2px #7996b14b; */
+}
+.info-desc-ctn {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    gap:15px;
+    justify-content: center;
+    align-items: center;
+
+}
+.info-tag-ctn {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.info-tag {
+    font-size: 18px;
+}
+
+.info-tag-line {
+    width: 1.4px;
+    height: 24px;
+    background-color: #444444;
+}
+
+.info-tag-lineD {
+    width: 1.4px;
+    height: 24px;
+    background-color: #e5e5e5;
+}
+.info-progress-bar-ctn
+{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+}
+.infoprogress {
+    width:17%;
+    height: 1.4px;
+}
+
+@media (max-width: 990px) {
+    .info-tech-ctn {
+        width: 80%;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+      
+    }
+    
+}
+@media (max-width: 768px) {
+    .info-tech-ctn {
+        width: 80%;
+        display: grid;
+        grid-template-columns:  45% 45%;
+      
+    }
+    
+}
+@media (max-width: 480px) {
+    .info-tech-ctn {
+        width: 100%;
+        display: grid;
+        grid-template-columns:  48% 48%;
+      
+    }
+    
+}

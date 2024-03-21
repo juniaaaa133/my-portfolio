@@ -1,0 +1,151 @@
+.hm-main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;    
+    margin-top: 20px;
+}
+.hm-sec {
+}
+.hmsec1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:4px;
+    width:45%;
+    height: 400px;
+}
+.hm-sub {
+    font-size: 15px;
+    font-weight: 600;
+}
+.hm-mega {
+    font-size: 38px;
+}
+.hmsec2 {
+    position: relative;
+    width:340px;
+    height: 400px;
+}
+.hm-ring1 {
+        border:solid 8px #7996B1;
+          position: absolute;
+          top:0;right:0;left:0;bottom:0;
+          margin: auto;
+          border-radius: 50%;
+          width:340px;
+          height: 340px;
+}
+.hm-img {
+    position: absolute;
+    top:0;right:0;left:0;bottom:0;
+    margin: auto;
+    width:245px;
+    height: 245px;
+    border-radius: 50%;
+
+}
+.hm-icn-main {
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    margin-bottom: 25px;
+
+}
+.hm-icn-ctn {
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.hm-line {
+    height: 1px;
+    width: 28px;
+    animation-name: line;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+.hm-desc-ctn {
+    width: 360px;
+    padding-top: 10px;
+    text-align: justify;
+}
+@keyframes line {
+    0% {
+        width:28px;
+    }
+    15%{
+        width: 28px;
+    }
+    30% {
+        width: 28px;
+    }
+    45% {
+        width:28px;
+    }
+    60% {
+        width : 18px
+    }
+    75%{
+        width:18px;
+    }
+    90%{
+        width: 18px;
+    }
+    100% {
+        width: 28px
+    }
+}
+@media (max-width: 990px) {
+    .hm-sec {
+        width:100%;
+       
+    }
+    .hm-ring1 {  
+        width:340px;
+        height: 340px;
+    }
+    .hm-img {
+        width:280px;
+        height: 280px;
+    }
+    .hmsec2 {
+        height: 350px;
+    }
+    .hm-desc-ctn {
+        width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    .hm-main {  
+        flex-direction: column-reverse;
+        justify-content: inherit;
+        align-items: inherit;
+        margin-top: 30px;
+    }
+    .hmsec1 {
+        height: fit-content;
+    }
+    .hmsec3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap:4px;
+        width:100%;
+        height: fit-content;
+    }
+    .hm-mega {
+        font-size: 28px;
+    }
+    .hm-icn-main {
+        margin-bottom: 15px;
+
+    }
+    .hm-ring1 {  
+        width:290px;
+        height: 290px;
+    }
+    .hm-img {
+        width:240px;
+        height: 240px;
+    }
+}
