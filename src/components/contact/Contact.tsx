@@ -1,7 +1,6 @@
 'use client'
 import TitleX from '@/ELEMENTX/Ui/Title/TitleX'
 import useClipboard from '@/feature/hooks/useClipboard';
-import ThemeContext from '@/feature/themeContext/ThemeContext'
 import React, { useContext, useRef, useState } from 'react'
 import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";

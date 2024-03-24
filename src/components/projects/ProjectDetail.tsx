@@ -1,6 +1,5 @@
 import ButtonRr from '@/ELEMENTX/Ui/Buttons/ButtonRr';
 import TechX from '@/ELEMENTX/Ui/Tech/TechX';
-import ThemeContext from '@/feature/themeContext/ThemeContext'
 import { useTheme } from 'next-themes';
 import React, { useContext } from 'react'
 
