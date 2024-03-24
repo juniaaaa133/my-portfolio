@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import TitleX from '@/ELEMENTX/Ui/Title/TitleX';
-import ThemeContext from '@/feature/themeContext/ThemeContext';
 import Infos from './Infos';
 import { useTheme } from 'next-themes';
 
