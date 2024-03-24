@@ -3,13 +3,15 @@ import { txt, txt_h } from '@/data';
 import React, { useContext, useState } from 'react'
 import Typed from 'typed.js';
 import { Cursor , useTypewriter } from 'react-simple-typewriter';
-import ThemeContext from '@/feature/themeContext/ThemeContext';
 import IconX from '@/ELEMENTX/Ui/Icons/IconX';
 import ButtonR from '@/ELEMENTX/Ui/Buttons/ButtonR'
+import { useTheme } from 'next-themes';
+import { Link } from 'react-scroll';
+
 const HomePage = ({id } : {id: string}) => {
 
-let theme = useContext(ThemeContext);
-let [text] = useTypewriter({
+  let {theme} = useTheme();
+  let [text] = useTypewriter({
   words : ['Rein Ogga Myo','Front-end Developer'],
   loop : true ,
   typeSpeed : 100,
@@ -40,7 +42,10 @@ let [text] = useTypewriter({
   I am a frontend developer and my tech stacks are HTML, CSS, Javascript, ReactJS, NextJS, Typescript and Laravel.  
 </div>
 <div className="mini-bar"></div>
+<Link to='#contact'  smooth={true} offset={200} duration={1000}>
 <ButtonR theme={theme} text={'Hire me'} width='w-[150px]' />
+
+</Link>
       </div>
       <div className="hm-sec hmsec2">
 <div className="hm-ring1"></div>

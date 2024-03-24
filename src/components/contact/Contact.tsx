@@ -9,11 +9,13 @@ import { FaLocationDot } from "react-icons/fa6";
 import IconX from '@/ELEMENTX/Ui/Icons/IconX';
 import ToggleX from '@/ELEMENTX/Ui/Toggle/ToggleX';
 import ButtonR from '@/ELEMENTX/Ui/Buttons/ButtonR';
+import { useTheme } from 'next-themes';
 
 const Contact = ({id} : {id : string}) => {
 
-let theme = useContext(ThemeContext);
-let {isOpened,CopyToClipboard} = useClipboard();
+  let {theme}  = useTheme();
+
+  let {isOpened,CopyToClipboard} = useClipboard();
 console.log(isOpened , ' is cont');
 let [val ,setVal] = useState();
 

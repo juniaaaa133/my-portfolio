@@ -1,4 +1,3 @@
-import ThemeContext from '@/feature/themeContext/ThemeContext';
 import React, { useContext } from 'react'
 import { IoPersonSharp } from "react-icons/io5";
 import { IoLogoJavascript } from "react-icons/io";
@@ -12,10 +11,11 @@ import { SiTypescript } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { FaFigma } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
+import { useTheme } from 'next-themes';
 
 const Infos = () => {
 
-  let theme =useContext(ThemeContext);
+  let {theme}  = useTheme();
   let percentage = 80;
   let name = 'HTML';
   let logo = 'HTML';
