@@ -9,9 +9,11 @@ import IconX from '@/ELEMENTX/Ui/Icons/IconX';
 import ToggleX from '@/ELEMENTX/Ui/Toggle/ToggleX';
 import ButtonR from '@/ELEMENTX/Ui/Buttons/ButtonR';
 import { useTheme } from 'next-themes';
+import LoaderS from '@/ELEMENTX/Ui/Loader/LoaderS';
 
 const Contact = ({id} : {id : string}) => {
 
+  let [data,setData] = useState([]);
   let {theme}  = useTheme();
 
   let {isOpened,CopyToClipboard} = useClipboard();
@@ -21,7 +23,12 @@ let [val ,setVal] = useState();
   return (
     <div id={id} className='ct-main frame'>
         <TitleX theme={theme} name={'Contact Now'} />
-        <div className="ct-ctn">
+       {
+        data.length == 0 ? 
+        <LoaderS />
+        :
+        <>
+         <div className="ct-ctn">
             <div className="ct-form">
               <div className="ct-inp-ctn">
               <input type="text" placeholder='Full Name'className={`ct-inp text-[14px] sec-f mega-trans ${theme == 'dark' ? 'fonclD text-white' : 'fontcl'}` }/>
@@ -75,7 +82,10 @@ let [val ,setVal] = useState();
             </div>
         </div>
 <ToggleX text={"Copied To Clipboard!"} theme={theme} open={isOpened} />
-    </div>
+
+        </>
+       }
+           </div>
   )
 }
 

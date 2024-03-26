@@ -1,0 +1,29 @@
+.ls-main {
+    width:100%;
+    height: 100vh;
+    position: relative;
+}
+.ls {
+    position: absolute;
+    top:0;right:0;left:0;bottom:0;
+    margin: auto;
+    width:80%;
+    height: 80%;
+    border-radius: 20px;
+    background-color: #81818132;
+    animation: loaderS;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes loaderS {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -7,9 +7,10 @@ import IconX from '@/ELEMENTX/Ui/Icons/IconX';
 import ButtonR from '@/ELEMENTX/Ui/Buttons/ButtonR'
 import { useTheme } from 'next-themes';
 import { Link } from 'react-scroll';
-
+import LoaderS from '@/ELEMENTX/Ui/Loader/LoaderS'
 const HomePage = ({id } : {id: string}) => {
 
+  let [data,setData] = useState([]);
   let {theme} = useTheme();
   let [text] = useTypewriter({
   words : ['Rein Ogga Myo','Front-end Developer'],
@@ -20,6 +21,9 @@ const HomePage = ({id } : {id: string}) => {
 })
 
   return (
+    data.length == 0 ? 
+    <LoaderS />
+    :
     <div id={id} className="hm-main frame">
       <div className="hm-sec hmsec1">
        <div className="hm-icn-main">
