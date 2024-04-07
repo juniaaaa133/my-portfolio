@@ -40,7 +40,7 @@ In publishing and graphic design, Lorem ipsum is a placeholder text commonly use
         {desc.length < 150 ? desc: desc.substring(0,151) + '...Read More.'}
       </div>
 <div className="pj-btn-ctn">
-<ButtonRr url='/' text={'Go live'} theme={theme} wh={'pj-live-btn'} type={'live'} />
+<ButtonRr url='https://github.com/juniaaaa133/my-portfolio' text={'Go live'} theme={theme} wh={'pj-live-btn'} type={'live'} />
 <ButtonRr url='/' text={'Repo'} theme={theme} wh={'pj-repo-btn'} type={'repo'} />
 
 </div>

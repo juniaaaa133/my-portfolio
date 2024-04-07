@@ -8,6 +8,7 @@ import ButtonR from '@/ELEMENTX/Ui/Buttons/ButtonR'
 import { useTheme } from 'next-themes';
 import { Link } from 'react-scroll';
 import LoaderS from '@/ELEMENTX/Ui/Loader/LoaderS'
+
 const HomePage = ({id } : {id: string}) => {
 
   let [data,setData] = useState([]);

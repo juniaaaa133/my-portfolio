@@ -24,7 +24,7 @@ let [val ,setVal] = useState();
     <div id={id} className='ct-main frame'>
         <TitleX theme={theme} name={'Contact Now'} />
        {
-        data.length == 0 ? 
+        data.length !== 0 ? 
         <LoaderS />
         :
         <>
