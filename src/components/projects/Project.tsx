@@ -2,12 +2,12 @@ import TitleX from '@/ELEMENTX/Ui/Title/TitleX'
 import TechX from '@/ELEMENTX/Ui/Tech/TechX';
 import ButtonRr from '@/ELEMENTX/Ui/Buttons/ButtonRr';
 import React, { useContext, useEffect, useState } from 'react'
-import {Link}  from 'react-scroll'
 import { useTheme } from 'next-themes';
 import { useRouter } from 'next/navigation';
 import LoaderS from '@/ELEMENTX/Ui/Loader/LoaderS';
 import { ProjectType } from '@/types';
 import { project_data } from '@/data';
+import Link from 'next/link';
 
 const Project = ({id} : {id : string}) => {
 
@@ -34,7 +34,7 @@ const Project = ({id} : {id : string}) => {
   <div className="pj-main frame">
  {
   data.map((project,index: number) => (
-    <div key={index} onClick={()=>route.push(`/projects/${project.id}`)} className="pj bcu">
+    <Link href={`/projects/${project.id}`} key={index} className="pj bcu">
     <div className="pj-techs">
 {
   project.tech_stacks.map((data,index : number) => <TechX key={index} logo={data} /> )
@@ -55,7 +55,7 @@ const Project = ({id} : {id : string}) => {
 
 </div>
     </div>
-  </div>
+  </Link>
   ))
  }
 </div>
