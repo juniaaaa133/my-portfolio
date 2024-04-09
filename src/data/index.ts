@@ -22,7 +22,7 @@ export const hero_data  : HeroType = {
 export const about_data :AboutType  = {
   exp_data : 1,
   proj_data : 20,
-
+    language_data : 2,
   about_text : `
   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
   `,
@@ -36,6 +36,7 @@ export const about_data :AboutType  = {
     {id : 1 ,logo : 'Laravel',percentage : 46},
     {id : 1 ,logo : 'Tailwind',percentage : 68},
   ],
+  about_image : '/img/aboutimg.jpg',
 }
 
 export const project_data :ProjectType[] = [

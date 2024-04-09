@@ -8,9 +8,10 @@ export type HeroType = {
 export type AboutType = {
     exp_data : number,
     proj_data : number,
-
+    language_data : number,
     about_text : string,
     skills : {id : number ,logo :string,percentage : number}[],
+    about_image : string,
 }
 
 export type ProjectType =  {
