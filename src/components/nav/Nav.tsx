@@ -3,7 +3,6 @@ import React, { ChangeEvent, Dispatch, SetStateAction, useContext, useEffect, us
 import '@/ELEMENTX/abstract/abstract.css';
 import { CiDark } from "react-icons/ci";
 import { CiLight } from "react-icons/ci";
-import {  bg, txt, txt_h } from '@/data';
 import useHover from '@/feature/hooks/useHover';
 import {Link} from 'react-scroll/modules' ;
 import { useTheme } from 'next-themes';

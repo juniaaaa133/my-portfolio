@@ -19,21 +19,11 @@ const Infos = () => {
   let percentage = 80;
   let name = 'HTML';
   let logo = 'HTML';
-  let Skills = [
-    {id : 1 ,logo : 'HTML',percentage : 88},
-    {id : 1 ,logo : 'CSS',percentage : 90},
-    {id : 1 ,logo : 'JavaScript',percentage : 80},
-    {id : 1 ,logo : 'ReactJS',percentage : 56},
-    {id : 1 ,logo : 'NextJS',percentage : 39},
-    {id : 1 ,logo : 'TypeScript',percentage : 30},
-    {id : 1 ,logo : 'Laravel',percentage : 46},
-    {id : 1 ,logo : 'Tailwind',percentage : 68},
-
-  ]
+  
 
   return (
    <div className="info-main frame">
-    <div className={`info-tech-ctn`}>
+    {/* <div className={`info-tech-ctn`}>
         {
           Skills.map(({logo , percentage} , idx :number) => (
             <div key={idx} className={`mega-trans ${theme == 'dark' ? 'infoD' : 'info'}`}>
@@ -80,7 +70,7 @@ const Infos = () => {
           ))
         }
 
-    </div>
+    </div> */}
    </div>
   )
 }
