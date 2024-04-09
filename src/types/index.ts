@@ -3,6 +3,11 @@ export type HeroType = {
     mega_text : string[]  ,
     desc : string  ,
     image : string,
+    social_name : {
+        social1 : string,
+        social2 : string,
+        social3 : string,
+    }
 } 
 
 export type AboutType = {

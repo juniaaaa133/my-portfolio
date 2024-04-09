@@ -13,19 +13,17 @@ import { FaFigma } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { useTheme } from 'next-themes';
 
-const Infos = () => {
+const Infos = ({skillData} : {
+  skillData : {id : number ,logo :string,percentage : number}[]
+}) => {
 
-  let {theme}  = useTheme();
-  let percentage = 80;
-  let name = 'HTML';
-  let logo = 'HTML';
-  
+  let {theme}  = useTheme()  
 
   return (
    <div className="info-main frame">
-    {/* <div className={`info-tech-ctn`}>
+    <div className={`info-tech-ctn`}>
         {
-          Skills.map(({logo , percentage} , idx :number) => (
+          skillData.map(({logo , percentage} , idx :number) => (
             <div key={idx} className={`mega-trans ${theme == 'dark' ? 'infoD' : 'info'}`}>
          <div className="info-desc-ctn">
          <div className="info-tag-ctn">
@@ -70,7 +68,7 @@ const Infos = () => {
           ))
         }
 
-    </div> */}
+    </div>
    </div>
   )
 }

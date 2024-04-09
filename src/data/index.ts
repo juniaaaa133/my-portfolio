@@ -16,7 +16,12 @@ export const hero_data  : HeroType = {
         'Frontend Developer'
     ],
     desc : 'I am a frontend developer and my tech stacks are HTML, CSS, Javascript, ReactJS, NextJS, Typescript and Laravel.',
-      image : '/img/mypic.jgp',
+    image : '/img/mypic.jpg',
+    social_name : {
+        social1 : 'facebook',
+        social2 : 'github',
+        social3 : 'telegram',
+    }
 };
 
 export const about_data :AboutType  = {
@@ -50,8 +55,8 @@ export const project_data :ProjectType[] = [
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
         `,
         cover_image : 'https://i.pinimg.com/736x/b0/4a/d7/b04ad77c207dbc4de31a3196074c03d8.jpg',
-        live_url : '/',
-        repo_url : '/',
+        live_url : 'https://melodious.vercel.app/',
+        repo_url : 'https://github.com/juniaaaa133/melodious',
         mockup_images : {
             laptop_image : 'https://i.pinimg.com/736x/01/01/95/01019534d9fed7113feda3865ad6fbfc.jpg',
             mobile_image : 'https://i.pinimg.com/736x/01/01/95/01019534d9fed7113feda3865ad6fbfc.jpg',

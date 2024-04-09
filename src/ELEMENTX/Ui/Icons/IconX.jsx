@@ -11,6 +11,7 @@ import { FaPinterestP } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { useTheme } from 'next-themes';
+import { FaGithub } from "react-icons/fa6";
 
 
 const IconX = ({type ,url}) => {
@@ -36,6 +37,8 @@ const IconX = ({type ,url}) => {
 <FaTiktok className={`mega-trans  text-[50px] icn_a ${theme == 'dark' ? 'fontclDH':'fontclH'}`}/>
 :type == 'linkedin' ?
 <FaLinkedinIn className={`mega-trans  text-[50px] icn_a ${theme == 'dark' ? 'fontclDH':'fontclH'}`}/>
+:type == 'github' ?
+<FaGithub className={`mega-trans  text-[50px] icn_a ${theme == 'dark' ? 'fontclDH':'fontclH'}`}/>
 :
 <FaPinterestP className={`mega-trans  text-[50px] icn_a ${theme == 'dark' ? 'fontclDH':'fontclH'}`}/>
         }
