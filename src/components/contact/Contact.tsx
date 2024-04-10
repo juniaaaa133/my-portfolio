@@ -1,7 +1,7 @@
 'use client'
 import TitleX from '@/ELEMENTX/Ui/Title/TitleX'
 import useClipboard from '@/feature/hooks/useClipboard';
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, { ChangeEvent, useContext, useEffect, useRef, useState } from 'react'
 import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
@@ -12,11 +12,15 @@ import { useTheme } from 'next-themes';
 import LoaderS from '@/ELEMENTX/Ui/Loader/LoaderS';
 import { ContactType } from '@/types';
 import { contact_data, social_data } from '@/data';
+import { HandleEmail } from '@/features/emailjs/sendEmail';
 
 const Contact = ({id} : {id : string}) => {
 
   let {theme}  = useTheme();
+  let {isOpened,CopyToClipboard} = useClipboard();
   let [data,setData] = useState<ContactType>();
+  let messageInput = useRef(null);
+  let [message,setMessage] = useState('Submit')
 
   //api fetching style
   let FetchData = () => {
@@ -28,9 +32,14 @@ const Contact = ({id} : {id : string}) => {
   },[])
 
 
-  let {isOpened,CopyToClipboard} = useClipboard();
-console.log(isOpened , ' is cont');
-let [val ,setVal] = useState();
+  //Made a function that send submitted data to emailjs using useRef.
+let HandleSubmit = (e :ChangeEvent<HTMLFormElement>) => {
+  e.preventDefault();
+   if(messageInput.current !== null){
+    HandleEmail(messageInput.current);
+    setMessage("Submitted");
+   }
+}
 
   return (
     <div id={id} className='ct-main frame'>
@@ -41,17 +50,17 @@ let [val ,setVal] = useState();
         :
         <>
          <div className="ct-ctn">
-            <div className="ct-form">
+            <form onSubmit={HandleSubmit} ref={messageInput} className="ct-form">
               <div className="ct-inp-ctn">
-              <input type="text" placeholder='Full Name'className={`ct-inp text-[14px] sec-f mega-trans ${theme == 'dark' ? 'fonclD text-white' : 'fontcl'}` }/>
-                <input type="email" placeholder='Email Address'className={`ct-inp text-[14px] sec-f mega-trans ${theme == 'dark' ? 'fonclD text-white' : 'fontcl'}` }/>
+              <input name='name' type="text" placeholder='Full Name'className={`ct-inp text-[14px] sec-f mega-trans ${theme == 'dark' ? 'fonclD text-white' : 'fontcl'}` }/>
+                <input  name='email' type="email" placeholder='Email Address'className={`ct-inp text-[14px] sec-f mega-trans ${theme == 'dark' ? 'fonclD text-white' : 'fontcl'}` }/>
               </div>
-                <textarea name="" id="" className={`mega-trans ${theme == 'dark' ? 'fontcl3D' : 'fontcl3' } sec-f text-[14px] ct-area`} placeholder='Message'></textarea>
+                <textarea  name="message" id="" className={`mega-trans ${theme == 'dark' ? 'fontcl3D' : 'fontcl3' } sec-f text-[14px] ct-area`} placeholder='Message'></textarea>
 <div className="ct-btn-ctn">
-<ButtonR text='Submit' theme={theme} width={'ct-btn'} />
+<ButtonR text={message} theme={theme} width={'ct-btn'} />
 
 </div>
-            </div>
+            </form>
             <div className="ct-info-ctn">
               <div onClick={()=>CopyToClipboard(data.phone_number)} className={`mega-trans shadow-sm bcu ${theme == 'dark' ? "ct-infoD": "ct-info"} `} >
                 <div className="ct-info-title-ctn">
