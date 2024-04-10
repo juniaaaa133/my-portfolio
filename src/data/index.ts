@@ -48,19 +48,37 @@ export const project_data :ProjectType[] = [
     {
         id: 1,
         tech_stacks : [
-           'NextJS','TypeScript','CSS'
+           'NextJS','TypeScript','CSS','Tailwind'
         ],
         title : 'Melodious, Random Music App',
         desc : `
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
         `,
-        cover_image : 'https://i.pinimg.com/736x/b0/4a/d7/b04ad77c207dbc4de31a3196074c03d8.jpg',
+        cover_image : '/projectImage/p1l.png',
         live_url : 'https://melodious.vercel.app/',
         repo_url : 'https://github.com/juniaaaa133/melodious',
         mockup_images : {
-            laptop_image : 'https://i.pinimg.com/736x/01/01/95/01019534d9fed7113feda3865ad6fbfc.jpg',
-            mobile_image : 'https://i.pinimg.com/736x/01/01/95/01019534d9fed7113feda3865ad6fbfc.jpg',
-            tablet_image : 'https://i.pinimg.com/736x/01/01/95/01019534d9fed7113feda3865ad6fbfc.jpg',
+            laptop_image : '/projectImage/p1l.png',
+            mobile_image : '/projectImage/p1m.png',
+            tablet_image : '/projectImage/p1t.png',
+        }
+    },
+    {
+        id: 2,
+        tech_stacks : [
+           'NextJS','TypeScript','CSS','Tailwind'
+        ],
+        title : 'Goldpay, Banking Service Project',
+        desc : `
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        `,
+        cover_image : '/projectImage/p2l.png',
+        live_url : 'https://goldpay-plum.vercel.app/',
+        repo_url : 'https://github.com/juniaaaa133/goldpay-theBankingProj',
+        mockup_images : {
+            laptop_image : '/projectImage/p2l.png',
+            mobile_image : '/projectImage/p2m.png',
+            tablet_image : '/projectImage/p2t.png',
         }
     }
 ]
