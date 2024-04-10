@@ -5,20 +5,23 @@ import TechX from '@/ELEMENTX/Ui/Tech/TechX';
 import { project_data } from '@/data';
 import { ProjectType } from '@/types';
 import { useTheme } from 'next-themes';
+import { useRouter } from 'next/navigation';
 import React, { useContext, useEffect, useState } from 'react'
+import { CiDark, CiLight } from 'react-icons/ci';
+import { FaArrowLeft } from "react-icons/fa";
 
 const ProjectDetailPage = ({id} : {
     id : string,
 }) => {
 
 
-  let {theme} = useTheme();
+  let route = useRouter();
+  let {theme,setTheme} = useTheme();
   let [data,setData] = useState<ProjectType>();
 
   //api fetching style
   let FetchData = () => {
     let filteredProject = project_data.filter((data) => (data.id === parseInt(id)))
-    console.log(typeof id)
     setData(filteredProject[0])
   }
 
@@ -30,7 +33,16 @@ const ProjectDetailPage = ({id} : {
  data == undefined ?
  <LoaderS />
  : 
- <div className='pjd-main frame bar'>
+ <div className='pjd-main frame mini-bar'>
+    <div className="pjd-nav">
+<FaArrowLeft onClick={()=>route.push('/')} className={theme == 'dark' ? 'pjd-icn bcu fontclDH trans' : 'pjd-icn bcu fontclH trans'}/>
+{
+theme !== 'dark' ?
+<CiDark onClick={()=>setTheme('dark')} className={` fontclH nicn_rpsive bcu font-[600] trans text-[18px] `}/>
+          :
+<CiLight onClick={()=>setTheme('light')} className={`fontclDH nicn_rpsive bcu font-[600] trans text-[18px] `}/>
+}
+    </div>
  <div className="pjd-div1">
  <div className={`${theme == 'dark' ? 'fontclD' : 'fontcl' } trans sec-f pjd-title-def`}>{data.title}</div>
      <div className={`${theme == 'dark' ? 'fontclD' : 'fontcl' } trans sec-f pjd-title`}>{data.title}</div>
@@ -41,7 +53,7 @@ const ProjectDetailPage = ({id} : {
  <div className="pjd-div2 bar">
      <div className="pjd-tech-ctn">
          <div className="pjd-tech-title-ctn">
-             <div className="pjd-tech-title fontcl2 sec-f text-[13px]">Tech Stacks</div>
+             <div className="pjd-tech-title fontcl2 sec-f text-[15px]">Tech Stacks</div>
              <div className="pjd-line bg-sec"></div>
          </div>
          <div className="pjd-techs">
@@ -58,8 +70,8 @@ const ProjectDetailPage = ({id} : {
     
     <div className="pjd-desc-main">
     <div className="pjd-desc-ctn">
-         <div className="pjd-desc-title fontcl2 text-[16px] sec-f">Project Description</div>
-         <div className={`pjd-desc sec-f mega-trans text-[13px] ${theme == 'dark' ? 'fontcl3D' : 'fontcl3'}`}>{data.desc}</div>
+         <div className="pjd-desc-title fontcl2 text-[17px] sec-f">Project Description</div>
+         <div className={`pjd-desc sec-f mega-trans text-[14px] ${theme == 'dark' ? 'fontcl3D' : 'fontcl3'}`}>{data.desc}</div>
      </div>
      <div className="pjd-btn-ctn">
 <ButtonRr url={data.live_url} text={'Go live'} theme={theme} wh={'pj-live-btn'} type={'live'} />

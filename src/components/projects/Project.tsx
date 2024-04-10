@@ -40,13 +40,13 @@ const Project = ({id} : {id : string}) => {
   project.tech_stacks.map((data,index : number) => <TechX key={index} logo={data} /> )
 }
     </div>
-    <div className={`${theme == 'dark' ? 'fontclD' : 'fontcl' } text-[15px]  sec-f mega-trans pj-title`}>{project.title}</div>
+    <div className={`${theme == 'dark' ? 'fontclD' : 'fontcl' } text-[17px]  sec-f mega-trans pj-title`}>{project.title}</div>
     <img  src={project.cover_image} alt="" className="pj-img pic" />
     <div className="pj-info-ctn">
-      <div className={`pj-desc sec-f text-[13px] meage-trans ${theme == 'dark' ? 'fontclD' : 'fontcl'}`}>
+      <div className={`pj-desc sec-f text-[14px] meage-trans ${theme == 'dark' ? 'fontclD' : 'fontcl'}`}>
         Description
       </div>
-      <div className={`pj-desc-txt text-[13px] mega-trans text-justify sec-f ${theme == 'dark' ? 'fontcl3D' : 'fontcl3'}` }>
+      <div className={`pj-desc-txt text-[14px] mega-trans text-justify sec-f ${theme == 'dark' ? 'fontcl3D' : 'fontcl3'}` }>
         {project.desc.length < 150 ? project.desc: project.desc.substring(0,151) + '....'}
       </div>
 <div className="pj-btn-ctn">

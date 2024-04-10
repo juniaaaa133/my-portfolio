@@ -4,6 +4,7 @@ import "./globals.css";
 import '@/ELEMENTX/abstract/abstract.css';
 import Nav from "@/components/nav/Nav";
 import { ThemeProvider } from "next-themes";
+import Footer from "@/components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
         {children}
+        <Footer />
         </ThemeProvider>
         </body>
     </html>
