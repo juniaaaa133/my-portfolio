@@ -1,7 +1,7 @@
 'use client'
 import TitleX from '@/ELEMENTX/Ui/Title/TitleX'
 import useClipboard from '@/feature/hooks/useClipboard';
-import React, { useContext, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
@@ -10,11 +10,23 @@ import ToggleX from '@/ELEMENTX/Ui/Toggle/ToggleX';
 import ButtonR from '@/ELEMENTX/Ui/Buttons/ButtonR';
 import { useTheme } from 'next-themes';
 import LoaderS from '@/ELEMENTX/Ui/Loader/LoaderS';
+import { ContactType } from '@/types';
+import { contact_data, social_data } from '@/data';
 
 const Contact = ({id} : {id : string}) => {
 
-  let [data,setData] = useState([]);
   let {theme}  = useTheme();
+  let [data,setData] = useState<ContactType>();
+
+  //api fetching style
+  let FetchData = () => {
+    setData(contact_data);
+  }
+
+  useEffect(()=>{
+    FetchData();
+  },[])
+
 
   let {isOpened,CopyToClipboard} = useClipboard();
 console.log(isOpened , ' is cont');
@@ -24,7 +36,7 @@ let [val ,setVal] = useState();
     <div id={id} className='ct-main frame'>
         <TitleX theme={theme} name={'Contact Now'} />
        {
-        data.length !== 0 ? 
+        data == undefined ? 
         <LoaderS />
         :
         <>
@@ -41,42 +53,42 @@ let [val ,setVal] = useState();
 </div>
             </div>
             <div className="ct-info-ctn">
-              <div onClick={()=>CopyToClipboard('09123456789')} className={`mega-trans shadow-sm bcu ${theme == 'dark' ? "ct-infoD": "ct-info"} `} >
+              <div onClick={()=>CopyToClipboard(data.phone_number)} className={`mega-trans shadow-sm bcu ${theme == 'dark' ? "ct-infoD": "ct-info"} `} >
                 <div className="ct-info-title-ctn">
                     <FaPhone className='ct-info-logo fontcl2 text-[10px] w-fit h-fit p-[5px] rounded-full'/>
                     <div className={`${theme == 'dark' ? 'fontclD' : 'fontcl' } mega-trans text-[12px] sec-f  ct-info-title`}>Phone Number</div>
                 </div>
                 <div className="ct-info-title-ctn">
                     <FaPhone className='opacity-[0] ct-info-logo fontcl2 text-[10px] w-fit h-fit p-[5px] rounded-full'/>
-                    <div className={`${theme == 'dark' ? 'fontcl3D' : 'fontcl3' } meag-tarns text-[12px] sec-f ct-info-value`}>09123456789</div>
+                    <div className={`${theme == 'dark' ? 'fontcl3D' : 'fontcl3' } meag-tarns text-[12px] sec-f ct-info-value`}>{data.phone_number}</div>
                 </div>
               </div>
-              <div onClick={()=>CopyToClipboard('09123456789')} className={`mega-trans shadow-sm bcu ${theme == 'dark' ? "ct-infoD": "ct-info"} `} >
+              <div onClick={()=>CopyToClipboard(data.email_address)} className={`mega-trans shadow-sm bcu ${theme == 'dark' ? "ct-infoD": "ct-info"} `} >
                 <div className="ct-info-title-ctn">
                     <MdEmail className='ct-info-logo fontcl2 text-[10px] w-fit h-fit p-[5px] rounded-full'/>
                     <div className={`${theme == 'dark' ? 'fontclD' : 'fontcl' } mega-trans text-[12px] sec-f  ct-info-title`}>Email Address</div>
                 </div>
                 <div className="ct-info-title-ctn">
                     <FaPhone className='opacity-[0] ct-info-logo fontcl2 text-[10px] w-fit h-fit p-[5px] rounded-full'/>
-                    <div className={`${theme == 'dark' ? 'fontcl3D' : 'fontcl3' } meag-tarns text-[12px] sec-f ct-info-value`}>reinnn.og@gmail.com</div>
+                    <div className={`${theme == 'dark' ? 'fontcl3D' : 'fontcl3' } meag-tarns text-[12px] sec-f ct-info-value`}>{data.email_address}</div>
                 </div>
               </div>
-              <div onClick={()=>CopyToClipboard(`16°51'04.0"N 96°11'11.5"E`)} className={`mega-trans shadow-sm bcu ${theme == 'dark' ? "ct-infoD": "ct-info"} `} >
+              <div onClick={()=>CopyToClipboard(data.address_direction)} className={`mega-trans shadow-sm bcu ${theme == 'dark' ? "ct-infoD": "ct-info"} `} >
                 <div className="ct-info-title-ctn">
                     <FaLocationDot className='ct-info-logo fontcl2 text-[10px] w-fit h-fit p-[5px] rounded-full'/>
                     <div className={`${theme == 'dark' ? 'fontclD' : 'fontcl' } mega-trans text-[12px] sec-f  ct-info-title`}>Address</div>
                 </div>
                 <div className="ct-info-title-ctn">
                     <FaPhone className='opacity-[0] ct-info-logo fontcl2 text-[10px] w-fit h-fit p-[5px] rounded-full'/>
-                    <div className={`${theme == 'dark' ? 'fontcl3D' : 'fontcl3' } meag-tarns text-[12px] sec-f ct-info-value`}>19th Street Zaya Rd ,SouthOkkalapa Township ,Yangon, Myanmar</div>
+                    <div className={`${theme == 'dark' ? 'fontcl3D' : 'fontcl3' } meag-tarns text-[12px] sec-f ct-info-value`}>{data.address_name}</div>
                 </div>
               </div>
               <div className="ct-icn-ctn mini-bar">
-                <IconX type='facebook' url='/' />
-                <IconX type='instagram' url='/' />
-                <IconX type='viber' url='/' />
-                <IconX type='telegram' url='/' />
-                <IconX type='linkedin' url='/' />
+                <IconX type='facebook' url={social_data.fb_social} />
+                <IconX type='instagram' url={social_data.instagram_social} />
+                <IconX type='github' url={social_data.github_social} />
+                <IconX type='telegram' url={social_data.telegram_social} />
+                <IconX type='linkedin' url={social_data.linkedin_social} />
 
               </div>
             </div>

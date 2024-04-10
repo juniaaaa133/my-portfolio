@@ -42,3 +42,15 @@ export type SocialType = {
     github_social :string,
     viber_social : string
 }
+
+export type ContactType =  {
+    email : {
+        service_id : string,
+        template_id : string,
+        api : string,
+    },
+    phone_number : string,
+    address_direction : string,
+    address_name : string,
+    email_address : string,
+}

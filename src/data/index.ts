@@ -1,4 +1,4 @@
-import { AboutType, HeroType, ProjectType, SocialType } from "@/types";
+import { AboutType, ContactType, HeroType, ProjectType, SocialType } from "@/types";
 
 export const social_data : SocialType = {
     fb_social : 'https://www.facebook.com/scientist.999?mibextid=JRoKGi',
@@ -83,13 +83,13 @@ export const project_data :ProjectType[] = [
     }
 ]
 
-export const contac_data : {} = {
+export const contact_data : ContactType = {
     email : {
         service_id : 'service_ofib2p9',
         template_id : 'template_16mn7p6',
         api : 'dAZB-7WvMyXopw6Zp',
     },
-    phone_number : 953523241,
+    phone_number : '0953523241',
     address_direction : `16°51'04.0"N 96°11'11.5"E`,
     address_name : '19th Street Zaya Rd ,SouthOkkalapa Township ,Yangon, Myanmar',
     email_address : 'reinnn.og@gmail.com'
