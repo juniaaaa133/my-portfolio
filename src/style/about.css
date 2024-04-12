@@ -29,7 +29,7 @@
 }
 .abt-detail {
     width: 100%;
-    text-align: justify;
+    text-align: inherit;
 }
 
 .abt-profile-ctn {

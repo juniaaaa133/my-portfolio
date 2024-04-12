@@ -29,8 +29,7 @@ export const about_data :AboutType  = {
   proj_data : 20,
     language_data : 2,
   about_text : `
-  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-  `,
+  A junior Front-End Developer achieved excellent skills in HTML, CSS, JavaScript, React and NextJS.I am knowledgeable in developing and managing responsive website with smooth user experience.I also have standard amount of knowledge in Backend api. I am willing to collaborate with team and offer my best experience to your establishment.  `,
   skills : [
     {id : 1 ,logo : 'HTML',percentage : 88},
     {id : 1 ,logo : 'CSS',percentage : 90},
@@ -52,7 +51,7 @@ export const project_data :ProjectType[] = [
         ],
         title : 'Melodious, Random Music App',
         desc : `
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        Melodious, the mini project is one of my coolest projects ever! local storage and local data are used in this project. Music data are used from YouTube. They depend on choices which will store in local storage. As It's own documentation is included in this project, anyone can easily enjoy it.
         `,
         cover_image : '/projectImage/p1l.png',
         live_url : 'https://melodious.vercel.app/',
@@ -70,8 +69,7 @@ export const project_data :ProjectType[] = [
         ],
         title : 'Goldpay, Banking Service Project',
         desc : `
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        `,
+        GoldPay is a mobile banking service app that a staff (admin) can control. Data are locally stored. An admin Dashboad styled service app has functions such as 'Deposit' , 'WIthdraw' and 'Transfer'. Any user can be searched by it's phone number in each function. It also has usual function such as user CRUD , and Transcation history.        `,
         cover_image : '/projectImage/p2l.png',
         live_url : 'https://goldpay-plum.vercel.app/',
         repo_url : 'https://github.com/juniaaaa133/goldpay-theBankingProj',
@@ -79,6 +77,23 @@ export const project_data :ProjectType[] = [
             laptop_image : '/projectImage/p2l.png',
             mobile_image : '/projectImage/p2m.png',
             tablet_image : '/projectImage/p2t.png',
+        }
+    },
+    {
+        id: 3,
+        tech_stacks : [
+           'NextJS','TypeScript','CSS','Tailwind'
+        ],
+        title : 'WizardRabbit , Q&A Website',
+        desc : `
+        As an project idea that helps us solve our problems and errors, WizardRabbit , Q&A website has categories and it's relatable questions. Data are locally stored . It also has search function and in each question detail page, A related questions and categories are also included. Also a beta Q&A project.        `,
+        cover_image : '/projectImage/p3l.png',
+        live_url : 'https://wizard-rabbit.vercel.app/',
+        repo_url : 'https://github.com/juniaaaa133/WizardRabbit-TechProbSolutionApp',
+        mockup_images : {
+            laptop_image : '/projectImage/p3l.png',
+            mobile_image : '/projectImage/p3m.png',
+            tablet_image : '/projectImage/p3t.png',
         }
     }
 ]
