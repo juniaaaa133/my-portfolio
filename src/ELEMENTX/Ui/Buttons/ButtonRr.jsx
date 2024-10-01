@@ -2,6 +2,7 @@ import React from 'react'
 import { IoIosEye } from "react-icons/io";
 import { FiGithub } from "react-icons/fi";
 import Link from 'next/link';
+import {NextResponse} from "next/server"
 
 const ButtonRr = ({text,wh ,url, theme,type}) => {
     return (

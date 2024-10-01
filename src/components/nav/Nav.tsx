@@ -50,7 +50,10 @@ window.addEventListener<'scroll'>('scroll',() =>
 <>
 
 <div className='nav-main'>
-        <div className={`${theme == 'dark' ? 'fontclD': 'fontcl'} trans nav-logo sec-fontcl main-f`}>Rein</div>
+    <div className="nav-name-ctn">
+      <p className="styled-f fontcl2">Mr.</p>
+      <p className={`${theme == 'dark' ? 'fontclD': 'fontcl'} trans nav-logo sec-fontcl sec-f`}>Rein</p>
+    </div>
         {/* Andriod Initial Code*/}
         <div onClick={()=>setIsOpened(!isOpened)} className={`nicn_rpsive2 bcu nicn-mb flex flex-col items-center w-fit h-fit gap-[5px]`}>
           <div className={` ${theme == 'dark' ? 'bg-slate-200': 'bg-slate-800'} w-[16px] h-[1.1px]  mega-trans ${isOpened == true ?'nicnmbop1' : 'nicnmb1'}` }></div>
@@ -103,8 +106,11 @@ theme !== 'dark' ?
 
 {/* Scrolldown Nav */}
 <div className={`nav-mainS trans ${show == false ? 'top-[-1000px]' : 'top-[0px]'}`}>
-<div className={`${theme == 'dark' ? 'fontclD': 'fontcl'} trans nav-logo sec-fontcl main-f`}>Rein</div>
-<div className="nav-info-ctn nicn_rpsive" >
+<div className="nav-name-ctn">
+      <p className="styled-f fontcl2">Mr.</p>
+      <p className={`${theme == 'dark' ? 'fontclD': 'fontcl'} trans nav-logo sec-fontcl sec-f`}>Rein</p>
+    </div>
+    <div className="nav-info-ctn nicn_rpsive" >
     <Link  className={`${theme == 'dark' ? 'fontclDH':'fontclH'} bcu sys-f nav-a trans `} to={url1} smooth={true} offset={200} duration={1000} >Home</Link>
     <Link  className={`${theme == 'dark' ? 'fontclDH':'fontclH'} bcu sys-f nav-a trans `} smooth={true} offset={200} duration={1000} to={url2}>About</Link>
     <Link  className={`${theme == 'dark' ? 'fontclDH':'fontclH'} bcu sys-f nav-a trans `} smooth={true} offset={200} duration={1000} to={url3}>Projects</Link>

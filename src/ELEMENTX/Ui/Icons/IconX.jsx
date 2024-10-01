@@ -11,8 +11,7 @@ import { FaPinterestP } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { useTheme } from 'next-themes';
-import { FaGithub } from "react-icons/fa6";
-
+import { FaGithub } from 'react-icons/fa6';
 
 const IconX = ({type ,url}) => {
 
@@ -21,9 +20,9 @@ const IconX = ({type ,url}) => {
   return (
     <a href={url} className='mega-trans icn-a p-[8px]'>
         { 
-           type =='facebook' ?
-        <FaFacebookF className={`mega-trans text-[50px] icn_a ${theme == 'dark' ? 'fontclDH':'fontclH'}`}/>
-            : type == 'instagram' ?
+type =='facebook' ?
+ <FaFacebookF className={`mega-trans text-[50px] icn_a ${theme == 'dark' ? 'fontclDH':'fontclH'}`}/>
+ : type == 'instagram' ?
             <FaInstagram className={`mega-trans text-[50px] icn_a ${theme == 'dark' ? 'fontclDH':'fontclH'}`}/>
 :type == 'telegram' ?
             <FaTelegramPlane className={`mega-trans text-[50px] icn_a ${theme == 'dark' ? 'fontclDH':'fontclH'}`}/>
@@ -37,10 +36,8 @@ const IconX = ({type ,url}) => {
 <FaTiktok className={`mega-trans  text-[50px] icn_a ${theme == 'dark' ? 'fontclDH':'fontclH'}`}/>
 :type == 'linkedin' ?
 <FaLinkedinIn className={`mega-trans  text-[50px] icn_a ${theme == 'dark' ? 'fontclDH':'fontclH'}`}/>
-:type == 'github' ?
-<FaGithub className={`mega-trans  text-[50px] icn_a ${theme == 'dark' ? 'fontclDH':'fontclH'}`}/>
 :
-<FaPinterestP className={`mega-trans  text-[50px] icn_a ${theme == 'dark' ? 'fontclDH':'fontclH'}`}/>
+<FaGithub className={`mega-trans  text-[50px] icn_a ${theme == 'dark' ? 'fontclDH':'fontclH'}`}/>
         }
     </a>
 

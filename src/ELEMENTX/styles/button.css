@@ -73,7 +73,7 @@ background-color:  #444654;
     color: #242421;
     border-radius: 2px;
     padding:8px 32px;
-   font-size: 16px;
+   font-size: 14px;
    font-weight: 500;
 }
 .bc-ctn-white:hover {
@@ -81,7 +81,7 @@ background-color:  #444654;
     color:#e59618;
 }
 .br-main {
-    padding: 18px 0;
+    padding: 15px 0;
     position: relative;
     border-radius: 30px;
     overflow: hidden;

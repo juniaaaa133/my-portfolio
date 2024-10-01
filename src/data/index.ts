@@ -15,7 +15,7 @@ export const hero_data  : HeroType = {
         'Rein Ogga Myo',
         'Frontend Developer'
     ],
-    desc : 'I am a frontend developer and my tech stacks are HTML, CSS, Javascript, ReactJS, NextJS, Typescript and Laravel.',
+    desc : 'I am a frontend developer , MERN stack developer and my tech stacks are HTML, CSS, Javascript, ReactJS, NextJS, Typescript and NodeJs.',
     image : '/img/mypic.jpg',
     social_name : {
         social1 : 'facebook',
@@ -25,20 +25,21 @@ export const hero_data  : HeroType = {
 };
 
 export const about_data :AboutType  = {
-  exp_data : 1,
-  proj_data : 20,
-    language_data : 2,
+  data1 : '1',
+  data2 : '19',
+  data3 : '4',
   about_text : `
-  A junior Front-End Developer achieved excellent skills in HTML, CSS, JavaScript, React and NextJS.I am knowledgeable in developing and managing responsive website with smooth user experience.I also have standard amount of knowledge in Backend api. I am willing to collaborate with team and offer my best experience to your establishment.  `,
+  A junior Front-End Developer and MERN stack developer achieved excellent skills in HTML, CSS, JavaScript, React, NextJS and NodeJs with standard amount of knowledge in both backend and api structure.I am knowledgeable in developing and managing responsive website with smooth user experience. I am willing to collaborate with team and offer my best experience to your establishment. `,
   skills : [
     {id : 1 ,logo : 'HTML',percentage : 88},
-    {id : 1 ,logo : 'CSS',percentage : 90},
-    {id : 1 ,logo : 'JavaScript',percentage : 80},
-    {id : 1 ,logo : 'ReactJS',percentage : 56},
-    {id : 1 ,logo : 'NextJS',percentage : 39},
-    {id : 1 ,logo : 'TypeScript',percentage : 30},
-    {id : 1 ,logo : 'Laravel',percentage : 46},
-    {id : 1 ,logo : 'Tailwind',percentage : 68},
+    {id : 2 ,logo : 'CSS',percentage : 90},
+    {id : 3 ,logo : 'JavaScript',percentage : 80},
+    {id : 4 ,logo : 'ReactJS',percentage : 56},
+    {id : 5 ,logo : 'NextJS',percentage : 39},
+    {id : 6 ,logo : 'Node.js',percentage : 30},
+    {id : 7 ,logo : 'TypeScript',percentage : 30},
+    // {id : 8 ,logo : 'Laravel',percentage : 26},
+    {id : 9 ,logo : 'Tailwind',percentage : 68},
   ],
   about_image : '/img/aboutimg.jpg',
 }
@@ -94,6 +95,24 @@ export const project_data :ProjectType[] = [
             laptop_image : '/projectImage/p3l.png',
             mobile_image : '/projectImage/p3m.png',
             tablet_image : '/projectImage/p3t.png',
+        }
+    },
+    {
+        id: 4,
+        tech_stacks : [
+           'ReactJS','CSS','Tailwind'
+        ],
+        title : 'Mabel - Movie Project',
+        desc : `
+        Mabel ,one of the classic movie streaming projects is built simply and smoothly using React libiary and tailwind css.User can watch trailers of movies such as the upcomings ,the most populars.This is one of the simpliest projects with smooth Ui and functions.
+        `,
+        cover_image : '/projectImage/p4l.png',
+        live_url : 'https://mabel-stream.vercel.app/',
+        repo_url : 'https://github.com/juniaaaa133/movieProject',
+        mockup_images : {
+            laptop_image : '/projectImage/p4l.png',
+            mobile_image : '/projectImage/p4m.png',
+            tablet_image : '/projectImage/p4t.png',
         }
     }
 ]

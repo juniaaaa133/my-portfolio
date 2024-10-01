@@ -33,19 +33,19 @@ const About = ({id} : {id: string}) => {
     <div className="abt-detail-ctn">
     <div className="abt-profile-ctn">
     <div className="abt-profile">
-        <div className={`fontcl2 text-[32px] font-[600] abt-title`}>{data.exp_data}</div>
+        <div className={`fontcl2 text-[32px] font-[600] abt-title`}>{data.data1}</div>
         <div className={`${theme == 'dark' ? 'fontclD': ' fontcl'} font-[600] mega-trans  text-[10px] abt-desc1`}>Years of </div>
         <div className={`${theme == 'dark' ? ' fontclD' : 'fontcl'} font-[600] mega-trans text-[10px] abt-desc2`}>Experience</div>
       </div>
       <div className="abt-profile">
-        <div className={`fontcl2 text-[32px] font-[600] abt-title`}>{data.proj_data}</div>
-        <div className={`${theme == 'dark' ? 'fontclD': ' fontcl'} font-[600] mega-trans  text-[10px] abt-desc1`}>Total </div>
-        <div className={`${theme == 'dark' ? ' fontclD' : 'fontcl'} font-[600] mega-trans text-[10px] abt-desc2`}>Projects</div>
+        <div className={`fontcl2 text-[32px] font-[600] abt-title`}>{data.data2}</div>
+        <div className={`${theme == 'dark' ? 'fontclD': ' fontcl'} font-[600] mega-trans  text-[10px] abt-desc1`}>Years </div>
+        <div className={`${theme == 'dark' ? ' fontclD' : 'fontcl'} font-[600] mega-trans text-[10px] abt-desc2`}>Old</div>
       </div>
       <div className="abt-profile">
-        <div className={`fontcl2 text-[32px] font-[600] abt-title`}>{data.language_data}</div>
-        <div className={`${theme == 'dark' ? 'fontclD': ' fontcl'} font-[600] mega-trans  text-[10px] abt-desc1`}>Total </div>
-        <div className={`${theme == 'dark' ? ' fontclD' : 'fontcl'} font-[600] mega-trans text-[10px] abt-desc2`}>Languages</div>
+        <div className={`fontcl2 text-[32px] font-[600] abt-title`}>{data.data3}</div>
+        <div className={`${theme == 'dark' ? 'fontclD': ' fontcl'} font-[600] mega-trans  text-[10px] abt-desc1`}>Main </div>
+        <div className={`${theme == 'dark' ? ' fontclD' : 'fontcl'} font-[600] mega-trans text-[10px] abt-desc2`}>Projects</div>
       </div>
     
 </div>

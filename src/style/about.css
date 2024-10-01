@@ -82,4 +82,7 @@ display: none;
         width: 280px;
         gap:20px;
     }
+    .abt-detail {
+        text-align: justify;
+    }
 }

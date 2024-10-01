@@ -7,6 +7,7 @@
     z-index : 8;
 }
 .nav-logo {
+    font-size: 20px;
 }
 .nav-info-ctn {
     width:500px;
@@ -34,7 +35,11 @@
     height: fit-content;
     z-index : 8;
 }
-
+.nav-name-ctn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 .nicn_rpsive2 {
 display: none;
 }

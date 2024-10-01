@@ -58,7 +58,7 @@ const HomePage = ({id } : {id: string}) => {
 <div className={`hm-desc-ctn sec-f text-[15px] mega-trans ${theme == 'dark' ? 'fontcl3D':'fontcl3'}`}>{data.desc}</div>
 <div className="mini-bar"></div>
 <Link to='#contact'  smooth={true} offset={200} duration={1000}>
-<ButtonR theme={theme} text={'Hire me'} width='w-[150px]' />
+<ButtonR theme={theme} text={'Hire me'} width='w-[100px]' />
 
 </Link>
       </div>

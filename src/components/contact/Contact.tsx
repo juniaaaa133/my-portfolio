@@ -12,7 +12,7 @@ import { useTheme } from 'next-themes';
 import LoaderS from '@/ELEMENTX/Ui/Loader/LoaderS';
 import { ContactType } from '@/types';
 import { contact_data, social_data } from '@/data';
-import { HandleEmail } from '@/features/emailjs/sendEmail';
+import { HandleEmail } from '@/feature/emailjs/sendEmail';
 
 const Contact = ({id} : {id : string}) => {
 
@@ -102,7 +102,7 @@ let HandleSubmit = (e :ChangeEvent<HTMLFormElement>) => {
               </div>
             </div>
         </div>
-<ToggleX text={"Copied To Clipboard!"} theme={theme} open={isOpened} />
+<ToggleX text={"Copied To Clipboard!"}  open={isOpened} />
 
         </>
        }

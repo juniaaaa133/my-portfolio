@@ -50,7 +50,6 @@ const Infos = ({skillData} : {
             <SiTailwindcss className='info-tag text-[#06AFC6]'/>
             :
             <FaFigma className='info-tag text-[#2C2F38]'/>
-
           }
             <div className={` ${theme == 'dark'  ? 'info-tag-lineD' : 'info-tag-line'} mega-trans`}></div>
           </div>
@@ -59,10 +58,9 @@ const Infos = ({skillData} : {
          <div className="info-progress-bar-ctn">
           <div className="infoprogress bg-sec"></div>
           <div className={`sec-f text-[11px]  info-lvl ${theme == 'dark' ? 'fontcl3D' : 'fontcl3'}`}>{
-            percentage >= 0 && percentage <= 30 ? 'Beginner' : percentage >= 31 && percentage <= 50 ? 'Interintermediate' : percentage >= 51 && percentage <= 70 ? 'Advanced' : percentage >= 71 && percentage <= 99 ? 'Proficient' : 'Expert' 
+           percentage >= 0 && percentage <= 30 ? 'Beginner' : percentage >= 31 && percentage <= 50 ? 'Intermediate' : percentage >= 51 && percentage <= 70 ? 'Advanced' : percentage >= 71 && percentage <= 99 ? 'Proficient' : 'Expert' 
           }</div>
           <div className="infoprogress bg-sec"></div>
-
          </div>
         </div>
           ))
