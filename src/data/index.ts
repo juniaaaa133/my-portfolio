@@ -46,7 +46,7 @@ export const about_data :AboutType  = {
 
 export const project_data :ProjectType[] = [
     {
-        id: 1,
+        id: 9321,
         tech_stacks : [
            'NextJS','TypeScript','CSS','Tailwind'
         ],
@@ -64,7 +64,7 @@ export const project_data :ProjectType[] = [
         }
     },
     {
-        id: 2,
+        id: 6552,
         tech_stacks : [
            'NextJS','TypeScript','CSS','Tailwind'
         ],
@@ -83,18 +83,19 @@ export const project_data :ProjectType[] = [
     {
         id: 3,
         tech_stacks : [
-           'NextJS','TypeScript','CSS','Tailwind'
+           'ReactJS','TypeScript',"Node.js",'CSS','Tailwind'
         ],
-        title : 'WizardRabbit , Q&A Website',
+        title : 'Mobocat - Game Review Blog',
         desc : `
-        As an project idea that helps us solve our problems and errors, WizardRabbit , Q&A website has categories and it's relatable questions. Data are locally stored . It also has search function and in each question detail page, A related questions and categories are also included. Also a beta Q&A project.        `,
-        cover_image : '/projectImage/p3l.png',
-        live_url : 'https://wizard-rabbit.vercel.app/',
-        repo_url : 'https://github.com/juniaaaa133/WizardRabbit-TechProbSolutionApp',
+        This review blog website containing both user and admin roles is developed using MERN stack.Admin can manage(CRUD) blogs and users.Registration is performed through email verification link.Moreover, search function, category filtering function are included in this project.In backend, REST api with much functionalities and features is used.
+`,
+        cover_image : '/projectImage/p5l.png',
+        live_url : 'https://mobocat.netlify.app/',
+        repo_url : 'https://github.com/juniaaaa133/Review-Blog-Project.git',
         mockup_images : {
-            laptop_image : '/projectImage/p3l.png',
-            mobile_image : '/projectImage/p3m.png',
-            tablet_image : '/projectImage/p3t.png',
+            laptop_image : '/projectImage/p5l.png',
+            mobile_image : '/projectImage/p5m.png',
+            tablet_image : '/projectImage/p5t.png',
         }
     },
     {
